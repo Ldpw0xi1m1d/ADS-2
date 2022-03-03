@@ -64,3 +64,4 @@ cosx = pown(-1, i) * calcItem(x, 2 * i);
 cosx1 = cosx1 + cosx;
   } return cosx1;
 }
+
