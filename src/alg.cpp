@@ -30,14 +30,14 @@ double calcItem(double x, uint16_t n) {
 }
 
 double expn(double x, uint16_t count) {
-	double exp,exp1;
+	double exp, exp1;
 	exp1 = 1;
 	if (count == 1) {
 		exp = calcItem(x, 1);
 	}
 	for (int i = 1; i <= count; i++) {
 		exp = calcItem(x, i);
-	    exp1 = exp1 + exp;
+		exp1 = exp1 + exp;
 	}
 	return exp1;
 }
@@ -49,7 +49,7 @@ double sinn(double x, uint16_t count) {
 		sinx1 = x;
 	}
 	for (int i = 1; i <= count; i++) {
-		sinx = pown(-1, i) * calcItem(x, 2*i + 1);
+		sinx = pown(-1, i) * calcItem(x, 2 * i + 1);
 		sinx1 = sinx1 + sinx;
 	}
 	return sinx1;
