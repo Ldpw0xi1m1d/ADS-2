@@ -61,7 +61,7 @@ double cosn(double x, uint16_t count) {
 	if (count == 1) {
 		cosx1 = 1;
 	}
-	for (int i = 1; i <= count; i++) {
+	for (int i = 1; i < count; i++) {
 		cosx = pown(-1, i) * calcItem(x, 2 * i);
 		cosx1 = cosx1 + cosx;
 	}
