@@ -54,13 +54,15 @@ sinx1 = sinx1 + sinx;
 }
 
 double cosn(double x, uint16_t count) { 
- double result = 1; 
- int step = 2; 
- int symbol = -1; 
- for (int i = 2; i <= count; i++) { 
- result += symbol*(pown(x, step) / fact(step)); 
- step += 2; 
- symbol = -symbol; 
+ double cosx, cosx1; 
+ cosx1 = 1; 
+ if (count == 1) { 
+  cosx1 = 1; 
  } 
- return result; 
+ for (int i = 1; i < count; i++) { 
+ cosx = pown(-1, i) * calcItem(x, 2 * i); 
+  cosx1 = cosx1 + cosx; 
+ } 
+ return cosx1; 
 }
+
