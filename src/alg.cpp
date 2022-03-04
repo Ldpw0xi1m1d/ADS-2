@@ -9,7 +9,7 @@ value1 = value;
 if (n == 0) {
      return 1;
      }
-    for (int i = 1; i <= n; i++) {
+    for (int i = 1; i < n; i++) {
      value1 = value * value1;
     } return value1;
 }
