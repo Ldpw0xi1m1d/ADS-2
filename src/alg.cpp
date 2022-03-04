@@ -57,7 +57,7 @@ double cosn(double x, uint16_t count) {
  double result = 1; 
  int step = 2; 
  int symbol = -1; 
- for (int i = 2; i <= count; i++) { 
+ for (int i = 2; i < count; i++) { 
  result += symbol*(pown(x, step) / fact(step)); 
  step += 2; 
  symbol = -symbol; 
